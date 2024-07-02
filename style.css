@@ -151,14 +151,14 @@ input[type="email"]::placeholder {
     grid-area: 1 / 1 / 2 / 2;
   }
 
+  .title {
+    font-size: 3.5rem;
+  }
+
   .success-state {
     min-height: auto !important;
     padding: 4rem !important;
     border-radius: 2.5rem;
-  }
-
-  .success-state .title {
-    font-size: 3.5rem !important;
   }
 }
 
