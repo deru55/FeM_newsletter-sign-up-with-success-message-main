@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter sign-up form with success message</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="success-state" class="success-state | hidden">
+        <img src="assets/images/icon-success.svg" alt="" />
+        <div class="flow">
+          <h2 class="title | fw-bold">Thanks for subscribing!</h2>
+          <p>
+            A confirmation email has been sent to
+            <span id="sent-to-email" class="fw-bold"></span>. Please open it and
+            click the button inside to confirm your subscription
+          </p>
+        </div>
+        <button id="dismiss-btn" class="button form-control fw-bold">
+          Dismiss message
+        </button>
+      </div>
+
+      <div id="card" class="card">
+        <picture>
+          <source
+            media="(min-width:1025px)"
+            srcset="assets/images/illustration-sign-up-desktop.svg"
+          />
+          <img
+            src="assets/images/illustration-sign-up-mobile.svg"
+            alt=""
+            class="card__img-hero"
+          />
+        </picture>
+
+        <div class="card__body | flow">
+          <h2 class="title | fw-bold">Stay updated!</h2>
+
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+          <ul class="flow" style="--flow-spacer: 1.5rem">
+            <li class="flex-row">
+              <img src="assets/images/icon-list.svg" alt="" />
+              <p>Product discovery and building what matters</p>
+            </li>
+
+            <li class="flex-row" style="--flow-spacer: 0.5rem">
+              <img src="assets/images/icon-list.svg" alt="" />
+              <p>Measuring to ensure updates are a success</p>
+            </li>
+
+            <li class="flex-row" style="--flow-spacer: 0.5rem">
+              <img src="assets/images/icon-list.svg" alt="" />
+              <p>And much more!</p>
+            </li>
+          </ul>
+
+          <form
+            action="#"
+            id="subscribe-form"
+            class="flow"
+            style="--flow-spacer: 2.75rem"
+            novalidate
+          >
+            <div
+              class="fs-300 fw-bold flex-row"
+              style="justify-content: space-between"
+            >
+              <label for="email-input">Email address</label>
+              <span class="invalid-msg | hidden">Valid email required</span>
+            </div>
+
+            <input
+              type="email"
+              id="email-input"
+              class="form-control"
+              name="email"
+              placeholder="email@company.com"
+              required
+              style="--flow-spacer: 0.5rem"
+            />
+
+            <button
+              type="submit"
+              class="button form-control fw-bold"
+              style="--flow-spacer: 1.5rem"
+            >
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
